@@ -1,3 +1,3 @@
-{ ... }
+{ pkgs, ... }
 
-environment.defaultPackages = [ minecraft ];
+environment.defaultPackages = [ pkgs.minecraft ];
