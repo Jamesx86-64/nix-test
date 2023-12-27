@@ -8,7 +8,7 @@
       system = "x86_64-linux";
       modules = [
         {
-          environment.systemPackages = [ nixpkgs.minecraft ];
+          environment.systemPackages = [ pkgs.minecraft ];
         }
       ];
     };
