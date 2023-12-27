@@ -4,13 +4,9 @@
   inputs.nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
 
   outputs = { self, nixpkgs }: {
-    defaultPackage.x86_64-linux = nixpkgs.lib.nixosSystem {
-      system = "x86_64-linux";
-      modules = [
-        {
-          environment.systemPackages = [ pkgs.minecraft ];
-        }
-      ];
+    packages.${system} = {
+      minecraft = nixpkgs.pkgs.minecraft;
     };
+    defaultPackage.${system} = self.packages.${system}.minecraft;
   };
 }
