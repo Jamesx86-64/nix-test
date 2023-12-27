@@ -3,7 +3,7 @@
 
   inputs.nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
 
-  outputs = { self, nixpkgs }: {
+  outputs = { self, nixpkgs, system ? "x86_64-linux" }: {
     packages.${system} = {
       minecraft = nixpkgs.pkgs.minecraft;
     };
