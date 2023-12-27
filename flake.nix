@@ -6,6 +6,6 @@
   };
 
   outputs = { self, nixpkgs }: {
-    imports = [ ./default.nix ]
+    imports = [ ./default.nix ];
   };
 }
